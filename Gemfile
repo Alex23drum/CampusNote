@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use less for stylesheets
@@ -45,4 +43,18 @@ gem 'twitter-bootswatch-rails-helpers'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry'
+  gem 'byebug'
+end
+ 
+group :test do
+  gem 'capybara', '~> 2.4.4'
+end
 
