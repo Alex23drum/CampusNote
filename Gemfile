@@ -36,6 +36,12 @@ gem 'twitter-bootswatch-rails-helpers'
 gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
 
+# User Authentication
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
