@@ -8,6 +8,15 @@ class NotesController < ApplicationController
 
   # GET /notes/1
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf:       @note.title,
+               template:  'notes/show.pdf.erb',
+               layout:    'pdf.html.erb',
+               encoding:  'UTF-8'
+      end
+    end
   end
 
   # GET /notes/new

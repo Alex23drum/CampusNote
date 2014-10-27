@@ -32,6 +32,10 @@ gem 'twitter-bootswatch-rails', '~> 3.2.0'
 # twitter bootstrap helpers gem, e.g., alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
 
+# Generate PDF
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -3,7 +3,3 @@
   <h1 id="title"><%= @note.title %></h1>
   <div id="result"><%= @note.content %></div>
 </div>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %><br>
-<%= link_to "PDFで表示", note_path(@note, format: :pdf) %>
