@@ -23,12 +23,22 @@ $(function() {
         langPrefix: ''
     });
 
+    var src = $("#result").html();
+    var html = marked(src);
+    $('#result').html(html);
+
     $('#editor').keyup(function() {
         var src = $(this).val();
 
         var html = marked(src);
 
         $('#result').html(html);
+    });
+
+    $('#note_title').keyup(function() {
+        var src = $(this).val();
+
+        $('#title').html(src);
     });
   });
 });

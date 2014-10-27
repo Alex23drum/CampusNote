@@ -273,11 +273,15 @@ input, {
 }
 
 body {
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
+#editor {
+  min-height: 450px;
+}
 // result
-#result {
+#note {
+  min-height: 450px;
   font-family: HuiFont;
   font-size: 20px;
   color: #777;
@@ -305,6 +309,14 @@ body {
   background-repeat: repeat-y,  repeat-y, repeat;
   background-size: 30px 30px, 30px 30px, 30px 30px;
   padding: 36px 48px 23px 80px;
+  #date {
+    position: absolute;
+    right: 20px;
+  }
+  #title {
+    font-size: 36px;
+    border-bottom: 2px solid #ddd;
+  }
   &:after {
     border-left: 2px solid hsla(0,95%,50%,.1);
     border-right: 2px solid hsla(0,95%,50%,.1);
@@ -337,12 +349,7 @@ body {
     color: #FF350D;
   }
 }
-#editor {
-  height: 400px;
-  width: 550px;
-  position: fixed;
-  top: 117px;
-}
+
 .navbar-brand {
   background: image-url("logo.png") no-repeat left center;
   background-size: contain;

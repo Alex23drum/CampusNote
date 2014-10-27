@@ -1,0 +1,8 @@
+<div id="note">
+  <small id="date"><%= japtime_for(@note.created_at) %></small>
+  <h1 id="title"><%= @note.title %></h1>
+  <div id="result"><%= @note.content %></div>
+</div>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>
