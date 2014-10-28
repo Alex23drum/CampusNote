@@ -3,7 +3,7 @@ defaults: &defaults
 development:
   <<: *defaults
   facebook:
-    app_id: "1488717564739792ß"
+    app_id: "1488717564739792"
     app_secret: "8b40817fa94dbf6047385ee1024d1be2"
 
   twitter:
