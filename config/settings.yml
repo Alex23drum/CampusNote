@@ -1,0 +1,21 @@
+defaults: &defaults
+
+development:
+  <<: *defaults
+  facebook:
+    app_id: "1488717564739792ß"
+    app_secret: "8b40817fa94dbf6047385ee1024d1be2"
+
+  twitter:
+    api_key: "QaMl2YflBy2q6Viu4DjmRQHSN"
+    api_secret: "aLv2CKK4qSCx76zIoVvEgvNZ7AsxHyVHJCPS2e4mDCudxKYauB"
+
+test:
+  <<: *defaults
+  facebook:
+  twitter:
+
+production:
+  <<: *defaults
+  facebook:
+  twitter:
