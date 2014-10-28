@@ -1,6 +1,6 @@
 <%= form_for @note do |f| %>
   <div class="form-group">
-    <%= f.text_field :title, class: "form-control", placeholder: "タイトル" %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
   </div>
   <div class="row">
     <div class="col-xs-6">
@@ -17,5 +17,5 @@
     </div>
   </div>
   <br>
-  <%= f.submit "保存する", class: "btn btn-success" %>
+  <%= f.submit "Save", class: "btn btn-success" %>
 <% end %>

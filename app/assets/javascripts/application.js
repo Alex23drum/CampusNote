@@ -27,6 +27,9 @@ $(function() {
     var html = marked(src);
     $('#result').html(html);
 
+    var title = $('#note_title').val();
+    $('#title').html(title);
+
     $('#editor').keyup(function() {
         var src = $(this).val();
 
