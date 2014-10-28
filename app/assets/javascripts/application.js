@@ -18,30 +18,32 @@
 //= require_tree . 
 
 $(function() {
-  $(window).on('page:change', function() {
-    marked.setOptions({
-        langPrefix: ''
+    function escapeHTML(html) {
+      return jQuery('<div>').text(html).html();
+    }
+
+    $(window).on('page:change', function() {
+        marked.setOptions({
+            langPrefix: ''
     });
 
     var src = $("#result").html();
     var html = marked(src);
     $('#result').html(html);
 
-    var title = $('#note_title').val();
+    var title = escapeHTML($('#note_title').val());
     $('#title').html(title);
 
     $('#editor').keyup(function() {
         var src = $(this).val();
-
         var html = marked(src);
-
         $('#result').html(html);
     });
 
     $('#note_title').keyup(function() {
         var src = $(this).val();
-
-        $('#title').html(src);
+        var html = escapeHTML(src);
+        $('#title').html(html);
     });
   });
 });
