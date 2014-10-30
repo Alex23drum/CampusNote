@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20141027090015) do
 
   create_table "notes", force: true do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"

@@ -1,9 +1,10 @@
 class NotesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   # GET /notes
   def index
-    @notes = Note.all
+    @notes = current_user.notes
   end
 
   # GET /notes/1
@@ -21,7 +22,7 @@ class NotesController < ApplicationController
 
   # GET /notes/new
   def new
-    @note = Note.new
+    @note = current_user.notes.build
   end
 
   # GET /notes/1/edit
@@ -30,7 +31,7 @@ class NotesController < ApplicationController
 
   # POST /notes
   def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.build(note_params)
 
     if @note.save
       redirect_to @note, notice: 'ノートを作成しました'

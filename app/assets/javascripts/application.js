@@ -27,12 +27,20 @@ $(function() {
             langPrefix: ''
     });
 
-    var src = $("#result").html();
-    var html = marked(src);
-    $('#result').html(html);
+    var src = $("#editor").val();
+    if (src) {
+        var html = marked(src);
+        $('#result').html(html);
+    } else {
+        var src = $("#result").html();
+        var html = marked(src);
+        $('#result').html(html);
+    }
 
     var title = escapeHTML($('#note_title').val());
-    $('#title').html(title);
+    if (title) {
+        $('#title').html(title);
+    }
 
     $('#editor').keyup(function() {
         var src = $(this).val();
