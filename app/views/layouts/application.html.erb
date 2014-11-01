@@ -27,7 +27,11 @@
         <li><%= link_to "Home", root_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "New", new_note_path %></li>
+        <li>
+          <%= link_to new_note_path do %>
+            <i class="fa fa-edit fa-lg"></i> New
+            <% end %>
+        </li>
         <li><%= link_to "Notes", notes_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to "Signout", destroy_user_session_path, method: :delete %></li>
